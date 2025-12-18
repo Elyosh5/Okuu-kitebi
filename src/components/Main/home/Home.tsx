@@ -3,6 +3,7 @@ import style from "./Home.module.scss";
 import Image from "next/image";
 import DesktopLogo from "../../../assets/header/орнаменты.png";
 import MobileLogo from "../../../assets/header/mobilelogo.png";
+import Icon from "../../../assets/header/SearchIcon.png";
 
 const Home: React.FC = () => {
   return (
@@ -19,7 +20,12 @@ const Home: React.FC = () => {
             Храним прошлое. Формируем будущее.
           </p>
 
-          <input className={style.input} placeholder="Поиск" />
+          <div className={style.searchWrapper}>
+            <div className={style.icon}>
+              <Image src={Icon} alt="Search icon" width={20} height={20} />
+            </div>
+            <input className={style.input} placeholder="Поиск" />
+          </div>
         </div>
 
         <div className={style.image}>
