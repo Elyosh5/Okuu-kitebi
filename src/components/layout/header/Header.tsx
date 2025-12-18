@@ -3,7 +3,7 @@ import SearchIcon from "../../../assets/header/SearchIcon.png";
 import Eye from "../../../assets/header/Eyes.png";
 import { Dropdown, Space, Typography } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
-import logo from "../../../assets/header/logo.png";
+import logo from "../../../assets/logo.png";
 import Image from "next/image";
 
 const aboutItems = [
@@ -72,77 +72,81 @@ const { Link } = Typography;
 function Header() {
   return (
     <header className={style.header}>
-      <div className={style.logo}>
-        <a href="#">
-          <Image
-            src={logo}
-            alt="Vite logo"
-            style={{ height: "56px", width: "90px" }}
-          />
-        </a>
-      </div>
+      <div className="container">
+        <div className={style.content}>
+          <div className={style.logo}>
+            <a href="#">
+              <Image
+                src={logo}
+                alt="Vite logo"
+                style={{ height: "56px", width: "90px" }}
+              />
+            </a>
+          </div>
 
-      <nav className={style.navlinks}>
-        <Dropdown menu={{ items: aboutItems }} trigger={["click"]}>
-          <Link href="#">
-            <Space>О нас</Space>
-          </Link>
-        </Dropdown>
+          <nav className={style.navlinks}>
+            <Dropdown menu={{ items: aboutItems }} trigger={["click"]}>
+              <Link href="#">
+                <Space>О нас</Space>
+              </Link>
+            </Dropdown>
 
-        <Dropdown menu={{ items: catalogItems }} trigger={["click"]}>
-          <Link href="#">
-            <Space>Документайия</Space>
-          </Link>
-        </Dropdown>
+            <Dropdown menu={{ items: catalogItems }} trigger={["click"]}>
+              <Link href="#">
+                <Space>Документайия</Space>
+              </Link>
+            </Dropdown>
 
-        <Dropdown menu={{ items: newsItems }} trigger={["click"]}>
-          <Link href="#">
-            <Space>FQA</Space>
-          </Link>
-        </Dropdown>
+            <Dropdown menu={{ items: newsItems }} trigger={["click"]}>
+              <Link href="#">
+                <Space>FQA</Space>
+              </Link>
+            </Dropdown>
 
-        <Link href="#">НПА</Link>
+            <Link href="#">НПА</Link>
 
-        <Typography.Link href="#">Проекты</Typography.Link>
+            <Typography.Link href="#">Проекты</Typography.Link>
 
-        <Dropdown menu={{ items: statsItems }} trigger={["click"]}>
-          <Link href="#">
-            <Space>Новости</Space>
-          </Link>
-        </Dropdown>
+            <Dropdown menu={{ items: statsItems }} trigger={["click"]}>
+              <Link href="#">
+                <Space>Новости</Space>
+              </Link>
+            </Dropdown>
 
-        <Dropdown menu={{ items: statsItems }} trigger={["click"]}>
-          <Link href="#">
-            <Space>Библеотека</Space>
-          </Link>
-        </Dropdown>
+            <Dropdown menu={{ items: statsItems }} trigger={["click"]}>
+              <Link href="#">
+                <Space>Библеотека</Space>
+              </Link>
+            </Dropdown>
 
-        <Link href="#">Карта</Link>
-      </nav>
+            <Link href="#">Карта</Link>
+          </nav>
 
-      <div style={{ display: "flex", gap: "10px" }}>
-        <div className={style.languageItem}>
-          <button className={style.button}>Eng</button>
-          <button className={style.button}>Кырг</button>
-          <button className={style.button}>Рус</button>
+          <div style={{ display: "flex", gap: "10px" }}>
+            <div className={style.languageItem}>
+              <button className={style.button}>Eng</button>
+              <button className={style.button}>Кырг</button>
+              <button className={style.button}>Рус</button>
+            </div>
+
+            <div style={{ display: "flex", gap: "10px" }}>
+              <button className={style.button}>
+                <Image src={Eye} alt="Search" />
+              </button>
+              <button className={style.button}>
+                <Image src={SearchIcon} alt="Search" />
+              </button>
+            </div>
+          </div>
+
+          <div className={style.burgerMenu}>
+            <Dropdown menu={{ items: mobileItems }} trigger={["click"]}>
+              <Link>
+                <MenuOutlined style={{ fontSize: "24px", color: "#fff" }} />
+              </Link>
+            </Dropdown>
+          </div>
         </div>
-
-        <div style={{ display: "flex", gap: "10px" }}>
-          <button className={style.button}>
-            <Image src={Eye} alt="Search" />
-          </button>
-          <button className={style.button}>
-            <Image src={SearchIcon} alt="Search" />
-          </button>
-        </div>
-      </div>
-
-      <div className={style.burgerMenu}>
-        <Dropdown menu={{ items: mobileItems }} trigger={["click"]}>
-          <Link>
-            <MenuOutlined style={{ fontSize: "24px", color: "#fff" }} />
-          </Link>
-        </Dropdown>
       </div>
     </header>
   );
