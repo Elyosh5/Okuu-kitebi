@@ -58,17 +58,40 @@ const newsData: NewsItem[] = [
 
 export const News: FC = () => {
 	const leftNews = newsData[0];
-	const rightNews = newsData.slice;
-	1;
+	const rightNews = newsData.slice(1);
 
 	return (
 		<section className={scss.News}>
 			<div className="container">
 				<div className={scss.content}>
 					<div className={scss.left} key={leftNews.id}>
-						<Image src={leftNews.imageUrl} alt={leftNews.title} />
+						<Image
+							className={scss.newsOne}
+							src={leftNews.imageUrl}
+							alt={leftNews.title}
+						/>
+						<h1 className={scss.title}>
+							Lorem ipsum dolor sit amet consectetuLorem ipsum dolor sit amet
+							consectetu
+						</h1>
+						<p className={scss.text}>
+							Lorem ipsum dolor sit amet consectetur. Nisi orci vulputate nisl
+							viverra sit congue. Id quis sit lobortis amet in et. At nibh proin
+							non ut vulputate id amet eu massa.Lorem ipsum dolor sit amet
+							consectetur. Nisi orci vulputate nisl viverra sit congue. Id quis
+							sit lobortis amet in et. At nibh proin non ut vulputate id amet eu
+							massa.
+						</p>
 					</div>
-					<div className={scss.right}></div>
+					<div className={scss.right}>
+						{rightNews.map((item) => (
+							<div className={scss.news_box} key={item.id}>
+								{item.imageUrl.map((el) => (
+									<Image src={el.imageUrl} alt={item.title} />
+								))}
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 		</section>
