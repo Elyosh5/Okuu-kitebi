@@ -2,8 +2,8 @@
 import Contact from "../sections/contact/Contact";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
-import Home from "../Main/home/Home";
-import FAQ from "../Main/faq/Faq";
+import Home from "../sections/home/Home";
+import FAQ from "../sections/faq/Faq";
 import scss from "./Layout.module.scss";
 
 const Layout = () => {
@@ -16,7 +16,7 @@ const Layout = () => {
         <Contact />
       </main>
       <Footer />
-</div>
+    </div>
   );
 };
 

@@ -32,7 +32,6 @@ const Faq: React.FC = () => {
     padding: "10px 16px",
   };
 
-  // Создаём массив items для Collapse
   const items = faqItems.map((item) => ({
     key: item.id,
     label: item.question,
@@ -42,20 +41,22 @@ const Faq: React.FC = () => {
 
   return (
     <section className={style.faq}>
-      <div className={style.container}>
-        <h1 style={{ marginBottom: "40px" }}>FAQ</h1>
-        <Collapse
-          className={style.header}
-          bordered={false}
-          style={{ width: "100%" }}
-          expandIconPlacement="end" 
-          expandIcon={({ isActive }) => (
-            <span className={style.icon}>
-              {isActive ? <CloseCircleOutlined /> : <PlusCircleOutlined />}
-            </span>
-          )}
-          items={items} 
-        />
+      <div className="container">
+        <div className={style.content}>
+          <h1 style={{ marginBottom: "40px" }}>FAQ</h1>
+          <Collapse
+            className={style.header}
+            bordered={false}
+            style={{ width: "100%" }}
+            expandIconPlacement="end"
+            expandIcon={({ isActive }) => (
+              <span className={style.icon}>
+                {isActive ? <CloseCircleOutlined /> : <PlusCircleOutlined />}
+              </span>
+            )}
+            items={items}
+          />
+        </div>
       </div>
     </section>
   );
