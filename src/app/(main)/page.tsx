@@ -1,8 +1,6 @@
 import scss from "./page.module.scss";
-
 const page = () => {
-  return (
-  );
+  return <div></div>;
 };
 
 export default page;
