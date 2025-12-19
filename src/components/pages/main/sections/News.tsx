@@ -1,6 +1,6 @@
-"use client";
-import type { FC } from "react";
-import scss from "./News.module.scss";
+'use client';
+import type { FC } from 'react';
+import scss from './News.module.scss';
 
 export const News: FC = () => {
 	return (

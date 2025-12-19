@@ -1,11 +1,11 @@
-import { LayoutSite } from "@/components/layout/LayoutSite";
-import { FC, ReactNode } from "react";
+import { FC, ReactNode } from 'react';
+import { LayoutSite } from '@/components/layout/LayoutSite';
 
-interface IlayoutProps {
+interface ILayoutProps {
 	children: ReactNode;
 }
 
-const layout: FC<IlayoutProps> = ({ children }) => {
+const layout: FC<ILayoutProps> = ({ children }) => {
 	return (
 		<>
 			<LayoutSite>{children}</LayoutSite>
