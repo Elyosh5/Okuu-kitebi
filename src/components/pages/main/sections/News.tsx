@@ -57,15 +57,18 @@ const newsData: NewsItem[] = [
 ];
 
 export const News: FC = () => {
+	const leftNews = newsData[0];
+	const rightNews = newsData.slice;
+	1;
+
 	return (
 		<section className={scss.News}>
 			<div className="container">
 				<div className={scss.content}>
-					{newsData.map((item) => (
-						<div key={item.id}>
-							<Image src={item.imageUrl} alt={item.title} />
-						</div>
-					))}
+					<div className={scss.left} key={leftNews.id}>
+						<Image src={leftNews.imageUrl} alt={leftNews.title} />
+					</div>
+					<div className={scss.right}></div>
 				</div>
 			</div>
 		</section>

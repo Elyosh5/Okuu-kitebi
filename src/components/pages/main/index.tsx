@@ -6,8 +6,8 @@ export const MainPage: FC = () => {
 	return (
 		<>
 			{/* <News /> */}
-			<Contact />
 			<News />
+			<Contact />
 		</>
 	);
 };
