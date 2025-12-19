@@ -5,8 +5,9 @@ import { Contact } from './sections/Contact';
 export const MainPage: FC = () => {
 	return (
 		<>
-			<News />
+			{/* <News /> */}
 			<Contact />
+			<News />
 		</>
 	);
 };
