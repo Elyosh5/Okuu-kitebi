@@ -83,15 +83,7 @@ export const News: FC = () => {
 							massa.
 						</p>
 					</div>
-					<div className={scss.right}>
-						{rightNews.map((item) => (
-							<div className={scss.news_box} key={item.id}>
-								{item.imageUrl.map((el) => (
-									<Image src={el.imageUrl} alt={item.title} />
-								))}
-							</div>
-						))}
-					</div>
+					<div className={scss.right}></div>
 				</div>
 			</div>
 		</section>
