@@ -1,12 +1,19 @@
-import style from "./Header.module.scss";
+"use client";
+
+import React from "react";
+import scss from "./Header.module.scss";
+import Image from "next/image";
+import { Dropdown, Space, Typography } from "antd";
+import type { MenuProps } from "antd";
+import { MenuOutlined,DownOutlined } from "@ant-design/icons";
+
 import SearchIcon from "../../../assets/header/SearchIcon.png";
 import Eye from "../../../assets/header/Eyes.png";
-import { Dropdown, Space, Typography } from "antd";
-import { MenuOutlined } from "@ant-design/icons";
 import logo from "../../../assets/logo.png";
-import Image from "next/image";
 
-const aboutItems = [
+const { Link } = Typography;
+
+const aboutItems: MenuProps["items"] = [
   { key: "1", label: <a href="#">О нас</a> },
   { key: "2", label: <a href="#">История создания и развития</a> },
   { key: "3", label: <a href="#">Галерея</a> },
@@ -15,17 +22,17 @@ const aboutItems = [
   { key: "6", label: <a href="#">Партнеры и сотрудничество</a> },
 ];
 
-const catalogItems = [
+const catalogItems: MenuProps["items"] = [
   { key: "1", label: <a href="#">Направления</a> },
   { key: "2", label: <a href="#">Предметы</a> },
 ];
 
-const newsItems = [
+const newsItems: MenuProps["items"] = [
   { key: "1", label: <a href="#">Новости</a> },
   { key: "2", label: <a href="#">Публикации</a> },
 ];
 
-const statsItems = [
+const statsItems: MenuProps["items"] = [
   { key: "1", label: <a href="#">Список библиотек по КР по областям</a> },
   { key: "2", label: <a href="#">Коды школ</a> },
   {
@@ -34,57 +41,30 @@ const statsItems = [
   },
 ];
 
-const languagesItems = [
-  { key: "1", label: <a href="#">Кыргызский (KG)</a> },
-  { key: "2", label: <a href="#">Русский (RU)</a> },
+const languagesItems: MenuProps["items"] = [
+  { key: "kg", label: <a href="#">Кыргызский (KG)</a> },
+  { key: "ru", label: <a href="#">Русский (RU)</a> },
 ];
 
-const mobileItems = [
-  {
-    key: "about",
-    label: "О нас",
-    children: aboutItems,
-  },
-  {
-    key: "catalog",
-    label: "Каталог учебников",
-    children: catalogItems,
-  },
-  {
-    key: "news",
-    label: "Новости и публикации",
-    children: newsItems,
-  },
-  {
-    key: "stats",
-    label: "Статистика",
-    children: statsItems,
-  },
-  {
-    key: "lang",
-    label: "Язык",
-    children: languagesItems,
-  },
+const mobileItems: MenuProps["items"] = [
+  { key: "about", label: "О нас", children: aboutItems },
+  { key: "catalog", label: "Каталог учебников", children: catalogItems },
+  { key: "news", label: "Новости и публикации", children: newsItems },
+  { key: "stats", label: "Статистика", children: statsItems },
+  { key: "lang", label: "Язык", children: languagesItems },
 ];
 
-const { Link } = Typography;
-
-function Header() {
+const Header: React.FC = () => {
   return (
-    <header className={style.header}>
+    <div className={scss.Header}>
       <div className="container">
-        <div className={style.content}>
-          <div className={style.logo}>
-            <a href="#">
-              <Image
-                src={logo}
-                alt="Vite logo"
-                style={{ height: "56px", width: "90px" }}
-              />
-            </a>
+        <div className={scss.content}>
+          
+          <div className={scss.logo}>
+            <Image src={logo} alt="Logo" width={90} height={56} priority />
           </div>
 
-          <nav className={style.navlinks}>
+          <nav className={scss.navlinks}>
             <Dropdown menu={{ items: aboutItems }} trigger={["click"]}>
               <Link href="#">
                 <Space>О нас</Space>
@@ -93,19 +73,18 @@ function Header() {
 
             <Dropdown menu={{ items: catalogItems }} trigger={["click"]}>
               <Link href="#">
-                <Space>Документайия</Space>
+                <Space>Документация</Space>
               </Link>
             </Dropdown>
 
             <Dropdown menu={{ items: newsItems }} trigger={["click"]}>
               <Link href="#">
-                <Space>FQA</Space>
+                <Space>FAQ</Space>
               </Link>
             </Dropdown>
 
             <Link href="#">НПА</Link>
-
-            <Typography.Link href="#">Проекты</Typography.Link>
+            <Link href="#">Проекты</Link>
 
             <Dropdown menu={{ items: statsItems }} trigger={["click"]}>
               <Link href="#">
@@ -115,41 +94,41 @@ function Header() {
 
             <Dropdown menu={{ items: statsItems }} trigger={["click"]}>
               <Link href="#">
-                <Space>Библеотека</Space>
+                <Space>Библиотека <DownOutlined /></Space>
+                
               </Link>
             </Dropdown>
 
             <Link href="#">Карта</Link>
           </nav>
 
-          <div style={{ display: "flex", gap: "10px" }}>
-            <div className={style.languageItem}>
-              <button className={style.button}>Eng</button>
-              <button className={style.button}>Кырг</button>
-              <button className={style.button}>Рус</button>
+          <div className={scss.buttonPanel}>
+            <div className={scss.languageSwitcher}>
+              <button className={scss.button}>Кырг</button>
+              <button className={scss.button}>Рус</button>
             </div>
 
-            <div style={{ display: "flex", gap: "10px" }}>
-              <button className={style.button}>
-                <Image src={Eye} alt="Search" />
+            <div className={scss.iconGroup}>
+              <button className={scss.Sightbutton}>
+                <Image src={Eye} alt="Eye" width={20} height={20} />
               </button>
-              <button className={style.button}>
-                <Image src={SearchIcon} alt="Search" />
+              <button className={scss.Searchbutton}>
+                <Image src={SearchIcon} alt="Search" width={20} height={20} />
               </button>
             </div>
-          </div>
 
-          <div className={style.burgerMenu}>
-            <Dropdown menu={{ items: mobileItems }} trigger={["click"]}>
-              <Link>
-                <MenuOutlined style={{ fontSize: "24px", color: "#fff" }} />
-              </Link>
-            </Dropdown>
+            <div className={scss.burgerMenu}>
+              <Dropdown menu={{ items: mobileItems }} trigger={["click"]}>
+                <Link>
+                  <MenuOutlined style={{ fontSize: 24, color: "#000" }} />
+                </Link>
+              </Dropdown>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
-}
+};
 
 export default Header;
