@@ -1,0 +1,94 @@
+.booksSection {
+    background-color: #f9f9f9;
+    padding-top: 150px;
+
+    h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; 
+    font-size: 40px;
+    line-height: 100%; 
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0D0D0D;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 20px;
+    }
+}
+
+
+.bookCategory {
+
+    .bookGrid {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    h3 {
+        padding: 20px 100px;
+        color: #2B2828;
+    }
+
+    .bookCard {
+        width: 295px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+        display: flex;
+        flex-direction: column;
+        padding: 8px 16px 16px 16px;
+
+            img {
+                width: 100%;
+                height: 370px;
+                object-fit: cover;
+                border-radius: 8px; 
+                margin-bottom: 8px;
+            }
+
+            h4 {
+                font-family: 'Inter', sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0;
+                text-align: center;
+                text-transform: uppercase;
+                color: #0D0D0D;
+                margin: 0 0 4px 0;
+                // flex-grow: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                    }
+
+                    p {
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 100%; 
+                        letter-spacing: 0;
+                        text-align: center;
+                        color: #666666;
+                        margin: 0;
+                    }
+    }
+}
+.Btn {
+    display: block;
+    width: 1240px;
+    padding: 16px 28px;
+    margin: 40px auto;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+    background-color: #005bb5;
+    }
+}
