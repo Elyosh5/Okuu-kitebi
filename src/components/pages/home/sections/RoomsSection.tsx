@@ -12,7 +12,7 @@ export const RoomsSection = () => {
 	const rooms: Room[] = [
 		{
 			id: 1,
-			name: 'БОЛЬШОЙ КОНФЕРЕНЦ ЗАЛ',
+			name: 'БОЛЬШОЙ КОНФЕРЕНЦ ЗАЛ!',
 			adress: 'Манаса45',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nisl vel ultricies tincidunt, nunc nisl aliquam nisl, eget aliquet nisl nisl vel nisl. Sed euismod, nisl vel ultricies tincidunt, nunc nisl aliquam nisl, eget aliquet nisl nisl vel nisl.',
@@ -20,7 +20,7 @@ export const RoomsSection = () => {
 		},
 		{
 			id: 2,
-			name: 'БОЛЬШОЙ КОНФЕРЕНЦ ЗАЛ',
+			name: 'БОЛЬШОЙ КОНФЕРЕНЦ ЗАЛ!',
 			adress: 'Манаса45',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nisl vel ultricies tincidunt, nunc nisl aliquam nisl, eget aliquet nisl nisl vel nisl. Sed euismod, nisl vel ultricies tincidunt, nunc nisl aliquam nisl, eget aliquet nisl nisl vel nisl.',
