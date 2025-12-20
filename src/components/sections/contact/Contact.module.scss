@@ -1,0 +1,30 @@
+@import "../../../styles/helpers/breakpoints";
+.Contact {
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    h1 {
+      text-align: center;
+      margin-bottom: 2%;
+    }
+    .contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background: rgba(242, 242, 247, 1);
+      padding: 21px 20px;
+      border-radius: 16px;
+      flex-wrap: wrap;
+      gap: 20px;
+      .contact {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+    @include breakpoint-down("xll"){
+        
+    }
+  }
+}
