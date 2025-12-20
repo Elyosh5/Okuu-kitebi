@@ -1,0 +1,83 @@
+$breakpoints: (
+  "xs": 375px,
+  // Очень маленькие телефоны (iPhone SE, Samsung A)
+  "sm": 576px,
+  // Телефоны (портрет)
+  "md": 768px,
+  // Планшеты (портрет) / большие телефоны
+  "lg": 992px,
+  // Планшеты (альбом) / маленькие ноутбуки
+  "xl": 1200px,
+  // Ноутбуки / десктопы
+  "xxl": 1400px,
+  // Большие мониторы
+  "xxxl": 1600px,
+  // Очень большие мониторы
+);
+
+@mixin breakpoint-up($name) {
+  $value: map-get($breakpoints, $name);
+
+  @if $value {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Брейкпоинт '#{$name}' не найден";
+  }
+}
+
+@mixin breakpoint-down($name) {
+  $value: map-get($breakpoints, $name);
+
+  @if $value {
+    @media (max-width: ($value - 0.02px)) {
+      @content;
+    }
+  } @else {
+    @warn "Брейкпоинт '#{$name}' не найден";
+  }
+}
+
+@mixin breakpoint-between($min, $max) {
+  $min-value: map-get($breakpoints, $min);
+  $max-value: map-get($breakpoints, $max);
+
+  @if $min-value and $max-value {
+    @media (min-width: $min-value) and (max-width: ($max-value - 0.02px)) {
+      @content;
+    }
+  } @else {
+    @warn "Один из брейкпоинтов не найден: '#{$min}', '#{$max}'";
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}

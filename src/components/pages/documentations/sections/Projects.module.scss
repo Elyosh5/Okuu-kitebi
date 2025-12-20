@@ -1,0 +1,41 @@
+.Projects {
+  position: relative;
+
+  .content {
+    padding: 80px;
+    .ornament {
+      position: absolute;
+      z-index: -1;
+      width: 1075;
+      height: 1075;
+      top: -30px;
+      left: 209px;
+      opacity: 1;
+    }
+    h1 {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+
+      .ProjectsItem {
+        display: flex;
+        gap: 10px;
+        img {
+          width: 200px;
+          height: 206px;
+          object-fit: cover;
+          border-radius: 16px;
+        }
+        .text {
+          h3 {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+          }
+        }
+      }
+    }
+  }
+}

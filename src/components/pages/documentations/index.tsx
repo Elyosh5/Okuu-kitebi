@@ -1,0 +1,12 @@
+import type { FC } from 'react';
+import { Contact } from '../home/sections/Contact';
+import { Projects } from './sections/Projects';
+
+export const DocumentationPage: FC = () => {
+	return (
+		<>
+			<Projects />
+			<Contact />
+		</>
+	);
+};
