@@ -1,4 +1,4 @@
-import { Contact } from '../home/sections/Contact';
+import { Contact } from '../home/sections/contact/Contact';
 
 export const AboutUsPage = () => {
 	return (

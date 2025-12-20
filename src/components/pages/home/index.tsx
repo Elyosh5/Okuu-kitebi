@@ -1,18 +1,18 @@
 import type { FC } from 'react';
-import { Hero } from './sections/Hero';
-import { News } from './sections/News';
-import { BooksSection } from './sections/BooksSection';
-import { RoomsSection } from './sections/RoomsSection';
-import { Faq } from './sections/Faq';
-import { Contact } from './sections/Contact';
+import { Hero } from './sections/hero/Hero';
+import { News } from './sections/news/News';
+import { Books } from './sections/books/Books';
+import { Rooms } from './sections/rooms/Rooms';
+import { Faq } from './sections/faq/Faq';
+import { Contact } from './sections/contact/Contact';
 
 export const HomePage: FC = () => {
 	return (
 		<>
 			<Hero />
 			<News />
-			<BooksSection />
-			<RoomsSection />
+			<Books />
+			<Rooms />
 			<Faq />
 			<Contact />
 		</>
