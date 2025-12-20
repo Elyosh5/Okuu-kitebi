@@ -83,7 +83,7 @@ export const News: FC = () => {
 							massa.
 						</p>
 					</div>
-					<div className={scss.right}></div>
+					<div className={scss.right}>!</div>
 				</div>
 			</div>
 		</section>
