@@ -1,8 +1,8 @@
 'use client';
-import React, { StaticLifecycle, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import scss from './Projects.module.scss';
-import image from '@/assets/projects/ae17a77be6d64459fc4df63d2a6fc3096dae9a15.jpg';
 import Image, { StaticImageData } from 'next/image';
+import image from '@/assets/projects/office.jpg';
 import ornament from '@/assets/ornament.png';
 
 interface ProjectsItemProps {
