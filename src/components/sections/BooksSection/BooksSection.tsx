@@ -15,6 +15,12 @@ const BooksSection = () => {
     { id: 4, title: 'Подросток', author: 'Ф.М. Достоевский', coverUrl: '/images/book4.jpg' },
     { id: 5, title: 'Записки из подполья', author: 'Ф.М. Достоевский', coverUrl: '/images/book5.jpg' },
     { id: 6, title: 'Записки для себя', author: 'Ф.М. Достоевский', coverUrl: '/images/book6.jpg' },
+    { id: 1, title: 'Преступление и наказание', author: 'Ф.М. Достоевский', coverUrl: 'https://cdn.ast.ru/v2/ASE000000000829671/COVER/cover1__w220.jpg'},
+    { id: 2, title: 'Идиот', author: 'Ф.М. Достоевский', coverUrl: '/images/thebooks.png' },
+    { id: 3, title: 'Бесы', author: 'Ф.М. Достоевский', coverUrl: '/images/book3.jpg' },
+    { id: 4, title: 'Подросток', author: 'Ф.М. Достоевский', coverUrl: '/images/book4.jpg' },
+    { id: 5, title: 'Записки из подполья', author: 'Ф.М. Достоевский', coverUrl: '/images/book5.jpg' },
+    { id: 6, title: 'Записки для себя', author: 'Ф.М. Достоевский', coverUrl: '/images/book6.jpg' },
   ];
 
   const collectionBooks: Book[] = [
@@ -24,10 +30,17 @@ const BooksSection = () => {
     { id: 10, title: 'Название для спортсмена', author: 'Автор 4', coverUrl: '/images/collection4.jpg' },
     { id: 11, title: 'Название для студента', author: 'Автор 5', coverUrl: '/images/collection5.jpg' },
     { id: 12, title: 'Название для врача', author: 'Автор 6', coverUrl: '/images/collection6.jpg' },
+    { id: 1, title: 'Преступление и наказание', author: 'Ф.М. Достоевский', coverUrl: 'https://cdn.ast.ru/v2/ASE000000000829671/COVER/cover1__w220.jpg'},
+    { id: 2, title: 'Идиот', author: 'Ф.М. Достоевский', coverUrl: '/images/thebooks.png' },
+    { id: 3, title: 'Бесы', author: 'Ф.М. Достоевский', coverUrl: '/images/book3.jpg' },
+    { id: 4, title: 'Подросток', author: 'Ф.М. Достоевский', coverUrl: '/images/book4.jpg' },
+    { id: 5, title: 'Записки из подполья', author: 'Ф.М. Достоевский', coverUrl: '/images/book5.jpg' },
+    { id: 6, title: 'Записки для себя', author: 'Ф.М. Достоевский', coverUrl: '/images/book6.jpg' },
   ];
 
   return (
     <section className={styles.booksSection}>
+      <div className="container">
       <h2>ЭЛЕКТРОННЫЕ КНИГИ</h2>
 
       <div className={styles.bookCategory}>
@@ -57,6 +70,7 @@ const BooksSection = () => {
       </div>
 
       <button className={styles.Btn}>Ещё</button>
+      </div>
     </section>
   );
 };

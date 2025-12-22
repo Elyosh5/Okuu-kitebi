@@ -15,7 +15,7 @@ const RoomsSection = () => {
       name: 'БОЛЬШОЙ КОНФЕРЕНЦ ЗАЛ',
       adress: 'Манаса45',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nisl vel ultricies tincidunt, nunc nisl aliquam nisl, eget aliquet nisl nisl vel nisl. Sed euismod, nisl vel ultricies tincidunt, nunc nisl aliquam nisl, eget aliquet nisl nisl vel nisl.',
-      imageUrl: '/images/room1.jpg',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz5PMFlkVuSJfHafuxqiAFqgjb6Yf0HzWijg&s',
     },
     {
       id: 2,
@@ -28,6 +28,7 @@ const RoomsSection = () => {
 
   return (
     <section className={styles.roomsSection}>
+      <div className="container">
       <h2>КОНФЕРЕНЦ ЗАЛЫ</h2>
       <div className={styles.roomsContainer}>
         {rooms.map((room) => (
@@ -40,6 +41,7 @@ const RoomsSection = () => {
         ))}
       </div>
       <button className={styles.Btn}>Ещё</button>
+      </div>
     </section>
   );
 };
