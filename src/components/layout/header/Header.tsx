@@ -86,11 +86,11 @@ const Header: React.FC = () => {
             <Link href="#">НПА</Link>
             <Link href="#">Проекты</Link>
 
-            <Dropdown menu={{ items: statsItems }} trigger={["click"]}>
-              <Link href="#">
-                <Space>Новости</Space>
-              </Link>
-            </Dropdown>
+						<Dropdown menu={{ items: statsItems }} trigger={['click']}>
+							<Link href="#">
+								<Space>Новости</Space>
+							</Link>
+						</Dropdown>
 
             <Dropdown menu={{ items: statsItems }} trigger={["click"]}>
               <Link href="#">
@@ -99,8 +99,8 @@ const Header: React.FC = () => {
               </Link>
             </Dropdown>
 
-            <Link href="#">Карта</Link>
-          </nav>
+						<Link href="#">Карта</Link>
+					</nav>
 
           <div className={scss.buttonPanel}>
             <div className={scss.languageSwitcher}>
