@@ -68,7 +68,7 @@ export const News: FC = () => {
 		<section className={scss.News}>
 			<div className="container">
 				<div className={scss.content}>
-					<h1>Новости</h1>
+					<h1 className={scss.news_title}>Новости</h1>
 					<div className={scss.news_container}>
 						<div className={scss.left} key={leftNews.id}>
 							<Image
@@ -93,12 +93,15 @@ export const News: FC = () => {
 										/>
 									</div>
 									<div className={scss.text_info}>
-										<h2 className={scss.news_title}>{item.title}</h2>
+										<h1 className={scss.title}>{item.title}</h1>
 										<p className={scss.news_text}>{item.description}</p>
 									</div>
 								</div>
 							))}
 						</div>
+					</div>
+					<div className={scss.news_button}>
+						<button className={scss.btn}>Ещё</button>
 					</div>
 				</div>
 			</div>
