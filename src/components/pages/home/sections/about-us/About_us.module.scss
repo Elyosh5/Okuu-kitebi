@@ -1,0 +1,79 @@
+.About_us {
+	padding-block: 60px;
+	.content {
+		.aboutTitle {
+			text-align: center;
+			padding-bottom: clamp(15px, 3vw, 30px);
+		}
+		.aboutUs_container {
+			display: flex;
+			justify-content: space-between;
+			gap: clamp(10px, 3vw, 20px);
+			@media (max-width: 1000px) {
+				flex-direction: column-reverse;
+			}
+			.leftAboutUs {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: clamp(8px, 2vw, 10px);
+				.subTitle {
+					font-weight: 500;
+					font-size: clamp(16px, 3vw, 24px);
+					color: #004743;
+				}
+				.description {
+					font-weight: 400;
+					font-size: clamp(10px, 3vw, 16px);
+					line-height: clamp(12px, 2vw, 20px);
+				}
+				.left_about {
+					display: flex;
+					flex-direction: column;
+					margin-top: clamp(10px, 2vw, 20px);
+					.left_box {
+						display: flex;
+						gap: clamp(10px, 2vw, 15px);
+						@media (max-width: 1300px) {
+							flex-direction: column;
+						}
+						.box_left {
+							display: flex;
+							flex-direction: column;
+							// gap: 20px;
+						}
+						.left_about_images {
+							display: flex;
+							gap: 20px;
+						}
+						.aboutUsImage {
+						}
+					}
+				}
+				.about_button {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					list-style: none;
+					width: 100%;
+					height: 56px;
+					background: #004743;
+					border-radius: 16px;
+					color: #ffffff;
+				}
+			}
+			.rightAboutUs {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				@media (max-width: 1000px) {
+					justify-content: center;
+				}
+				.aboutUsImage {
+					// width: 100%;
+					// height: 100%;
+				}
+			}
+		}
+	}
+}
