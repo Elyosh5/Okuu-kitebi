@@ -1,94 +1,115 @@
 .booksSection {
-    background-color: #f9f9f9;
-    padding-top: 150px;
+  background-color: #f9f9f9;
+  padding-top: 150px;
 
-    h2 {
+  h2 {
     font-family: 'Inter', sans-serif;
-    font-weight: 700; 
-    font-size: 40px;
-    line-height: 100%; 
-    letter-spacing: 0;
+    font-weight: 700;
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 100%;
     text-align: center;
     text-transform: uppercase;
-    color: #0D0D0D;
-    margin: 0 0 1.5rem 0;
-    padding-bottom: 20px;
-    }
+    color: #0d0d0d;
+    margin-bottom: 32px;
+  }
 }
-
 
 .bookCategory {
+  margin-bottom: 48px;
 
-    .bookGrid {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    h3 {
-        padding: 20px 100px;
-        color: #2B2828;
-    }
-
-    .bookCard {
-        width: 295px;
-        background-color: #FFFFFF;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
-        display: flex;
-        flex-direction: column;
-        padding: 8px 16px 16px 16px;
-
-            img {
-                width: 100%;
-                height: 370px;
-                object-fit: cover;
-                border-radius: 8px; 
-                margin-bottom: 8px;
-            }
-
-            h4 {
-                font-family: 'Inter', sans-serif;
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 100%;
-                letter-spacing: 0;
-                text-align: center;
-                text-transform: uppercase;
-                color: #0D0D0D;
-                margin: 0 0 4px 0;
-                // flex-grow: 1;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                    }
-
-                    p {
-                        font-family: 'Inter', sans-serif;
-                        font-weight: 400;
-                        font-size: 14px;
-                        line-height: 100%; 
-                        letter-spacing: 0;
-                        text-align: center;
-                        color: #666666;
-                        margin: 0;
-                    }
-    }
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(20px, 3vw, 28px);
+    color: #2b2828;
+    padding: 16px;
+  }
 }
-.Btn {
-    display: block;
-    width: 1240px;
-    padding: 16px 28px;
-    margin: 40px auto;
-    background-color: #0070f3;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
 
-    &:hover {
+.bookGrid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 16px 12px;
+  scroll-behavior: smooth;
+}
+
+.bookGrid::-webkit-scrollbar {
+  display: none;
+}
+.bookGrid {
+  scrollbar-width: none;
+}
+
+.bookCard {
+  flex-shrink: 0;
+  width: 220px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px 16px;
+  scroll-snap-align: start;
+
+  img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0d0d0d;
+    margin: 0 0 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #666666;
+    margin: 0;
+  }
+}
+
+.Btn {
+  display: block;
+  width: 100%;
+  max-width: 1240px;
+  padding: 16px 28px;
+  margin: 40px auto;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
     background-color: #005bb5;
-    }
+  }
+}
+
+@media (max-width: 480px) {
+  .bookCard {
+    width: 100%;
+  }
+
+  .bookCard img {
+    height: 471px;
+  }
 }
