@@ -19,7 +19,7 @@ const achievements: Achievement[] = [
     id: 2,
     title: "ЦИФРОВИЗАЦИЯ ФОНДОВ",
     description: "Запущена программа оцифровки редких документов и книжных коллекций, что позволяет удалённо работать с материалами и сохранять их для будущих поколений",
-    image: "/images/digitalization.jpg"
+    image:'https://news.com.kg/storage/2025/03/d34ca48ae5fb99e3ed8ff3e9067b942c.jpg',
   },
   {
     id: 3,
@@ -35,10 +35,15 @@ const achievements: Achievement[] = [
     id: 5,
     title: "ДОСТУПНОСТЬ И ОТКРЫТОСТЬ",
     description: "Внедрены современные сервисы — онлайн-каталоги, электронные читальные залы и программы для людей с ограниченными возможностями"
+  },
+  {
+    id: 6,
+    title: "ДОСТУПНОСТЬ И ОТКРЫТОСТЬ",
+    description: "Внедрены современные сервисы — онлайн-каталоги, электронные читальные залы и программы для людей с ограниченными возможностями"
   }
 ];
 
-export const achievement: FC = () => {
+export const Achievement: FC = () => {
     return (
         <section className={styles.achievement}>
             <div className='container'>
